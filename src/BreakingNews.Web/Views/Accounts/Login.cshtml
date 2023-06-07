@@ -1,0 +1,27 @@
+﻿@using BreakingNews.Service.Dtos.Accounts;
+@model AccountLoginDto
+@{
+    Layout = "_AccountsLayout.cshtml";
+}
+<div style=" background-color:  blue;height: 335px; width: 25%; text-align: center; margin-top: 150px; margin-left: 550px; margin-bottom: 50px; margin-right: 50px; border-radius: 10px;">
+    <h1>Login</h1>
+    <form asp-area="" asp-controller="accounts" asp-action="login" method="post">
+        <div style="margin-top: 5px; margin-left: 40px; margin-right: 500px;">
+            <label style="margin-right: 160px;">Email</label>
+            <input type="email" asp-for="Email" style="background-color: black; color: blue; height: 30px; width: 300px; margin-top: 15px;" placeholder="Email" />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div style="margin-top: 10px; margin-left: 40px; margin-bottom: 30px; margin-right: 475px; margin-top: 20px;">
+            <label style="margin-right: 130px;">Password</label>
+            <input type="password" asp-for="Password" style="background-color: black; color: blue; height: 30px; width: 300px; margin-top: 15px;" placeholder="Password " />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+    </form>
+    <div style="margin: 10%;">
+        <button type="submit" style="color: blue; background-color: black; text-align: center; height: 10%; width: 100%; margin-right: 10px; margin-bottom: 10px;">
+            Login
+        </button>
+        <br>
+        <a href="register" style="color: black;"> Register</a>
+    </div>
+</div>

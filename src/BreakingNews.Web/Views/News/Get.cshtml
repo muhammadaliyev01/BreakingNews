@@ -1,0 +1,12 @@
+﻿@using BreakingNews.Service.ViewModels.Products;
+@model NewViewModel
+
+    <div style="display:flex; flex-direction: row";>
+        <img style="width: 700px; height 700px; margin-left: 50px; margin-top: 70px; border-radius: 10px;" src="~/@Model.ImagePath"/>
+    <div style="background-color: honeydew; margin-top: 85px; margin-left: 50px; width: 600px; height: 500px; border-radius: 10px;">
+            <div style="text-align: center;">
+                <h2>@Model.Name</h2>
+            </div>
+            <h4 style="margin: 10px">@Model.Description</h4>
+        </div>
+    </div>

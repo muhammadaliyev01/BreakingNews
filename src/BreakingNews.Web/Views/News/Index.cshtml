@@ -1,0 +1,16 @@
+﻿@using BreakingNews.Service.ViewModels.Products;
+@model List<NewBaseViewModel>
+
+<div style="display:flex; flex-direction: row;">
+    @{
+        foreach (var product in Model)
+        {
+            <div style="margin-left: 10px; width: 300px">
+                    <a asp-controller="news" asp-action="get" asp-route-productId="@product.Id">
+                        <img style="border-radius: 10px; display: flex;justify-content: center" src="~/@product.ImagePath" width="300px" />
+                    <h2 style="color: black">@product.Name</h2>
+                    </a>
+            </div>
+        }
+    }
+</div>
